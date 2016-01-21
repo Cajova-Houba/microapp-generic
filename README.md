@@ -2,7 +2,7 @@
 [here](https://github.com/Cajova-Houba/microapp-generic-old.git)
 
 # TODO
-~~1. working version.~~
+1. ~~working version.~~
 
 build with `mvn install` in root directory
 
