@@ -2,25 +2,23 @@ package org.microapp.ui.membership;
 
 import java.util.List;
 
-import org.apache.wicket.markup.ComponentTag;
 import org.apache.wicket.markup.html.basic.Label;
-import org.apache.wicket.markup.html.link.Link;
 import org.apache.wicket.markup.repeater.Item;
 import org.apache.wicket.markup.repeater.data.DataView;
 import org.apache.wicket.markup.repeater.data.ListDataProvider;
-import org.apache.wicket.request.mapper.parameter.PageParameters;
 import org.apache.wicket.spring.injection.annot.SpringBean;
+import org.microapp.membernet.MembernetManager;
 import org.microapp.ui.base.GenericPage;
 
 import com.yoso.dev.membernet.member.domain.Member;
 import com.yoso.dev.membernet.membership.domain.Membership;
-import com.yoso.dev.membernet.membership.service.MembershipManager;
 import com.yoso.dev.membernet.society.domain.Society;
+
 
 public class MembershipPage extends GenericPage {
 
 	@SpringBean
-	private MembershipManager membershipManager;
+	private MembernetManager membernetManager;
 	
 	/**
 	 * 
@@ -45,7 +43,7 @@ public class MembershipPage extends GenericPage {
 	}
 	
 	private void showMembershipTable(String tableID) {
-		List<Membership> memberships = membershipManager.getAll();
+		List<Membership> memberships = membernetManager.listAll();
 		
 		final DataView dataView = new DataView(tableID,new ListDataProvider(memberships)){
 			

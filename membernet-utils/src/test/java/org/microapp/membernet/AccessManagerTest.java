@@ -18,7 +18,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 public class AccessManagerTest {
 	
 	@Autowired
-	private AccessManager accessManager;
+	private MembernetManager membernetManager;
 	
 	@Test
 	public void testCanAccess() {
@@ -26,6 +26,6 @@ public class AccessManagerTest {
 		long requesterId = 2l;
 		long targetId = 6l;
 		
-		assertTrue(accessManager.canAccess(requesterId, targetId));
+		assertTrue(membernetManager.canAccess(requesterId, targetId));
 	}
 }

@@ -41,8 +41,9 @@
 			classpath:applicationContext-service.xml
 			classpath:applicationContext.xml
 			
-			<!-- microapp-books -->
-			classpath:applicationContext-books-jpa.xml
+			<!-- membernet utils -->
+			classpath:applicationContext-membernet.xml
+			
 		</param-value>
 	</context-param>
 	
