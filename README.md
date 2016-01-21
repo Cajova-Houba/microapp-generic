@@ -3,7 +3,9 @@
 
 # TODO
 ~~1. working version.~~
+
 build with `mvn install` in root directory
+
 run ui by running the `Start` class located in test sources
 
 2. simple manual
