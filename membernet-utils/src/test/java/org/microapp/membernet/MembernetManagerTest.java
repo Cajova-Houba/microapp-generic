@@ -15,7 +15,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 		"classpath:/applicationContext-membernet.xml"
 })
 @Transactional
-public class AccessManagerTest {
+public class MembernetManagerTest {
 	
 	@Autowired
 	private MembernetManager membernetManager;
