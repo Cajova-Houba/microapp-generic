@@ -9,9 +9,38 @@
 
     <parent> 
     	<artifactId>microapp-generic</artifactId>
-	<groupId>org.microapp</groupId>
-	<version>0.1</version>
+		<groupId>org.microapp</groupId>
+		<version>0.1</version>
     </parent>
+
+
+    <properties>
+        <db.name>microapp_generic</db.name>
+		<!-- Database -->
+		<jdbc.username>root</jdbc.username>
+		<jdbc.password>r00t</jdbc.password>
+		<jdbc.groupId>mysql</jdbc.groupId>
+		<jdbc.artifactId>mysql-connector-java</jdbc.artifactId>
+		<jdbc.version>5.1.27</jdbc.version>
+		<jdbc.validationQuery>SELECT 1+1</jdbc.validationQuery>
+		<jdbc.url>
+            <![CDATA[jdbc:mysql://localhost/${db.name}?createDatabaseIfNotExist=true&amp;useUnicode=true&amp;characterEncoding=utf-8&amp;autoReconnect=true]]>
+        </jdbc.url>
+		<jdbc.driverClassName>com.mysql.jdbc.Driver</jdbc.driverClassName>
+		<dbunit.operation.type>CLEAN_INSERT</dbunit.operation.type>
+		
+		<!-- other prop -->
+		<skipTests>false</skipTests>
+		<junit.version>4.12</junit.version>
+		<hibernate.version>4.3.6.Final</hibernate.version>
+        <hibernate-search.version>4.5.1.Final</hibernate-search.version>
+		<spring.version>4.2.3.RELEASE</spring.version>
+		
+		<!-- file names -->
+		<jdbc.properties.file>jdbc-microappName.properties</jdbc.properties.file>
+		
+		
+    </properties>
 
 	<build>
 		<defaultGoal>install</defaultGoal>
@@ -202,43 +231,6 @@
 	      <scope>test</scope>
 	    </dependency>
     </dependencies>
-
-    <properties>
-        <amp.genericCore>true</amp.genericCore>
-        <amp.fullSource>false</amp.fullSource>
-        <dao.framework>hibernate</dao.framework>
-        <db.name>microapp_generic</db.name>
-        <web.framework>spring</web.framework>
-
-        <!-- Framework/Plugin versions -->
-        <appfuse.version>3.5.0</appfuse.version>
-        <java.version>1.7</java.version>
-		
-		<!-- Database -->
-		<jdbc.username>root</jdbc.username>
-		<jdbc.password>r00t</jdbc.password>
-		<jdbc.groupId>mysql</jdbc.groupId>
-		<jdbc.artifactId>mysql-connector-java</jdbc.artifactId>
-		<jdbc.version>5.1.27</jdbc.version>
-		<jdbc.validationQuery>SELECT 1+1</jdbc.validationQuery>
-		<jdbc.url>
-            <![CDATA[jdbc:mysql://localhost/${db.name}?createDatabaseIfNotExist=true&amp;useUnicode=true&amp;characterEncoding=utf-8&amp;autoReconnect=true]]>
-        </jdbc.url>
-		<jdbc.driverClassName>com.mysql.jdbc.Driver</jdbc.driverClassName>
-		<dbunit.operation.type>CLEAN_INSERT</dbunit.operation.type>
-		
-		<!-- other prop -->
-		<skipTests>false</skipTests>
-		<junit.version>4.12</junit.version>
-		<hibernate.version>4.3.6.Final</hibernate.version>
-        <hibernate-search.version>4.5.1.Final</hibernate-search.version>
-		<spring.version>4.2.3.RELEASE</spring.version>
-		
-		<!-- file names -->
-		<jdbc.properties.file>jdbc-microappName.properties</jdbc.properties.file>
-		
-		
-    </properties>
 
     <profiles>
         <profile>

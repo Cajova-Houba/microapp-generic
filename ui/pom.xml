@@ -24,21 +24,16 @@
 	<version>0.1</version>
 	<packaging>war</packaging>
 	<name>Microapplicaiton UI</name>
-	<description></description>
+	<description>
+		A simple UI for your microapplication.
+	</description>
 
 	<parent> 
-    		<artifactId>microapp-generic</artifactId>
+    	<artifactId>microapp-generic</artifactId>
 		<groupId>org.microapp</groupId>
 		<version>0.1</version>
-    	</parent>
+   	</parent>
 
-
-	<!--
-		<organization>
-			<name>company name</name>
-			<url>company url</url>
-		</organization>
-	-->
 	<licenses>
 		<license>
 			<name>The Apache Software License, Version 2.0</name>
@@ -46,6 +41,7 @@
 			<distribution>repo</distribution>
 		</license>
 	</licenses>
+	
 	<properties>
 		<wicket.version>7.1.0</wicket.version>
 		<jetty9.version>9.2.13.v20150730</jetty9.version>
@@ -58,11 +54,8 @@
 		<spring.version>4.2.3.RELEASE</spring.version>
 		<hibernate.version>3.6.7.Final</hibernate.version>
 		<hibernate-search.version>4.5.1.Final</hibernate-search.version>
-		<!-- <hibernate.version>4.3.6.Final</hibernate.version> -->
-		
-		
-		<mail.host>...</mail.host>
 	</properties>
+	
 	<dependencies>
 		<!--  WICKET DEPENDENCIES -->
 		<dependency>
