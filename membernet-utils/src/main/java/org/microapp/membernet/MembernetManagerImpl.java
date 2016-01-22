@@ -1,5 +1,6 @@
 package org.microapp.membernet;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -43,6 +44,23 @@ public class MembernetManagerImpl implements MembernetManager{
 
 	public List<Membership> listAll() {
 		return membershipManager.getAll();
+	}
+
+	public List<Membership> listAll(long societyId) {
+		// TODO Auto-generated method stub
+		
+		//this should be done by direct database query in DAO
+		List<Membership> all = membershipManager.getAll();
+		List<Membership> res = new ArrayList<Membership>();
+		
+		for(Membership m : all) {
+			if (m.getSocietyId() == societyId) {
+				res.add(m);
+			}
+		}
+		
+		return res;
+		
 	}
 
 	
